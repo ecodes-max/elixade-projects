@@ -4,6 +4,7 @@
     <p>COURSE: Computer Science</p>
     <p>Github link: https://github.com/ecodes-max/elixade-projects </p>
 </h2>
+<h3> Start by opening you python IDE </h3>
 <p>1. Import the function random and string to create random string</p>
 <p>2. Define the function for the creation of password </p>
 <p>3. inside the defined function create a variable for the number of attempt with zero
@@ -35,3 +36,4 @@
 <p>29. Then create a print fuction explaining touser to reinput the password and otp</p>
 <p>30. then end the function by calling the function</p>
 <p>31. then outside the function call the function for recursion </p>
+<p>32. then run the code</p>
