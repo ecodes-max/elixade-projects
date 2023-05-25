@@ -9,7 +9,7 @@ def verified():
     #turn password into a global variable to be able to use outside the function
     global password
     global confirm_password
-    password = input('ICREATE YOUR PASSWORD ')
+    password = input('CREATE YOUR PASSWORD ')
     global otp
     otp_ = str((random.randrange(1000,9999)))
     otp =  ''.join(otp_)
