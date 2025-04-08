@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Sheddy",
+        "contact_info": "0191919191",
+        "age": 34,
+        "gender": "Male",
+        "specialization": "Dentist",
+        "schedule": [
+            {
+                "date": "2025-15-02",
+                "time": "10:00 AM"
+            },
+            {
+                "date": "2012-10-02",
+                "time": "10:00 AM"
+            },
+            {
+                "date": "2025-03-10",
+                "time": "10:00 AM"
+            }
+        ],
+        "doctor_id": "0415760e-79"
+    },
+    {
+        "name": "Dr Heart",
+        "contact_info": "0918181190",
+        "age": 45,
+        "gender": "Male",
+        "specialization": "Cardiology",
+        "schedule": [],
+        "doctor_id": "3fa14489-34"
+    },
+    {
+        "name": "Brain",
+        "contact_info": "019192901",
+        "age": 45,
+        "gender": "Female",
+        "specialization": "Neurology",
+        "schedule": [
+            {
+                "date": "2025-02-19",
+                "time": "10:00 AM"
+            }
+        ],
+        "doctor_id": "eb95ec89-60"
+    },
+    {
+        "name": "Josh",
+        "contact_info": "0919121092",
+        "age": 23,
+        "gender": "23",
+        "specialization": "Pedeatrician",
+        "schedule": [
+            {
+                "date": "2025-02-19",
+                "time": "9:00 AM"
+            }
+        ],
+        "doctor_id": "4554098c-63"
+    }
+]

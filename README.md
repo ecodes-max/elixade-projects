@@ -1,39 +1,196 @@
-<h1> ALGORITHM FOR PASSWORD CREATION </h1>
-<h2><p> NAME: OMOTAYO EMMANUEL AYOMIDE </p>
-    <p>MATRIC NUMBER: EU220102-3110</p>
-    <p>COURSE: Computer Science</p>
-    <p>Github link: https://github.com/ecodes-max/elixade-projects </p>
-</h2>
-<h3> Start by opening you python IDE </h3>
-<p>1. Import the function random and string to create random string</p>
-<p>2. Define the function for the creation of password </p>
-<p>3. inside the defined function create a variable for the number of attempt with zero
-<p>4. Create a variable for the storage of the password created by the user and insert it into the variable an input statement to get the desired password from the password </p>
-<p>5. turn the variable password into a global variable so has to be able to call it outside of the function </p>
-<p>6. create a new variable to store in the random otp number using the attribute from radnom go create a code </p>
-<p>7. create a new variable to store in the otp random number and add it to a free string and convert to a string </p>
-<p>8. then create a print function to print the OTP</p>
-<p>9. create a while loop using the while function and having a condition less that three for it to run three times</p>
-<p>10. create a  variable to store the password for confirmation</p>
-<p>11. in the variable for confirmation use the input functionto get the password of confirmation by the user</p>
-<p>12. under the variable for confirmation create an if conditional statement to confirm if the password given by the user by comparing the variables storing password and the variable storing the confirmation of password using the boolean sign '==' operator</p>
-<p>13. under the if conditional statement create print function to print the acceptance of password if true the condition of the if conditional statement is met </p>
-<p>14. then use the return function</p>
-<p>15.  create an else statement if the conditions were not met </p>
-<p>16. then use the print function to state the reason why the conditions were not met</p>
-<p>17. call in the variable with zero and insert an incrementing  statement +=1</p>
-<p>18.  create an if conditional statement  when the number of attempts has reached the maximum number of times</p>
-<p>19. create a print statement for telling the user to use a more favorable password</p>
-<p>20. then call the defined function and under it out of indentation call the funtion continue then outside the indentation call in the define function for recursion</p>
-<p>21. create another define function for user login</p>
-<p>22. inside the function create a variable to store the random  funtion creating a username.</p>
-<p>23. create a variable to store the usercode by adding the random username variable to the string 'USER-'</p>
-<p>24. create a variable to store the password in which an input statement will be inserted to get the password created from the user</p>
-<p>25. create a variable to store the otp which will be gotten through the insert function requesting for OTP</p>
-<p>26.create an if conditional statement to check if the password is correct and the otp is correct</p>
-<p>27. Then create a print state that will print the password, usercode </p>
-<p>28. Then create an else statement that would chrck when one either the otp or the password is incorrect</p>
-<p>29. Then create a print fuction explaining touser to reinput the password and otp</p>
-<p>30. then end the function by calling the function</p>
-<p>31. then outside the function call the function for recursion </p>
-<p>32. then run the code</p>
+## **Hospital Appointment System Documentation**
+
+**Table of Contents**
+<b>
+1. Introduction
+2. System Overview
+3. Architecture & Design Principles
+
+4. Key Classes
+    <ul>Person </ul>
+    <ul>Doctor </ul>
+    <ul>Patient </ul>
+    <ul>Appointment </ul>
+    <ul>AppointmentScheduler </ul>
+    <ul>DataManager </ul>
+    <ul>HospitalCLI</ul>
+5. Data Persistence with JSON
+6. How to Run the Program
+7. User & Admin Areas
+8. Future Enhancements
+9. Conclusion
+</b>
+
+<h3> <b> 1. Introduction</b> </h3> 
+<p> The Hospital Appointment System is a CLI-based scheduling application built using Python. It allows patients to book, view, cancel, and reschedule appointments with doctors. The system leverages object-oriented programming (OOP) principles for modularity, maintainability, and scalability. </p>
+
+
+<h3> <b> 2. System Overview </h3> </b>
+<ol> <b> Purpose: </ol> </b>
+ To facilitate efficient scheduling between doctors and patients based on required specializations.
+
+<ul> <b>Technologies Used: </ul></b>
+
+<li>Python </li>
+<li>JSON for data persistence </li>
+<li> Command-Line Interface (CLI) for user interaction</li>
+
+<ul> <b>Key Features: </ul> </b>
+
+<li> Role-based access: Admin & User </li>
+<li> Unique identification for all entities </li>
+<li> Data storage and retrieval via JSON files </li>
+<li> Core scheduling, cancellation, and rescheduling functionalities </li>
+
+
+<h3> <b> 3. Architecture & Design Principles </h3> </b> 
+The system is designed using OOP principles:
+
+<li>Encapsulation:
+Each class (e.g., Person) encapsulates its data and exposes public methods for interaction. </li>
+
+<li> Abstraction:
+High-level methods (e.g., schedule_appointment()) hide complex internal logic. </li>
+
+<li> Inheritance:
+Doctor and Patient classes inherit common properties from the base Person class. </li>
+
+
+<h3> <b> 4. Key Classes </h3> </b> 
+
+**Person**
+- **Purpose:**  
+  Base class for all entities in the system.
+- **Key Attributes:**  
+  - `name`, `contact_info`, `age`, `gender`
+  - `person_id` (a unique identifier generated using `uuid`)
+- **Key Methods:**  
+  - Getters/Setters
+  - `update_info()`
+  - `__str__()` for a human-readable representation
+
+### Doctor
+- **Purpose:**  
+  Represents a doctor.
+- **Additional Attributes:**  
+  - `specialization`
+  - `schedule` (list of available slots)
+- **Key Methods:**  
+  - `add_available_slot(date, time)`
+  - `remove_slot(date, time)`
+  - `get_schedule()`
+
+### Patient
+- **Purpose:**  
+  Represents a patient.
+- **Additional Attributes:**  
+  - `card_no`, `date_of_birth`, `required_specialization`
+  - `appointments` (list of booked appointments)
+- **Key Methods:**  
+  - `add_appointment(date, time)`
+  - `cancel_appointment(date, time)`
+
+### Appointment
+- **Purpose:**  
+  Captures the details of an appointment.
+- **Key Attributes:**  
+  - `appointment_id`, `patient`, `doctor`, `date`, `time`, `status`
+- **Key Methods:**  
+  - `cancel_appointment()`
+  - `reschedule_appointment(new_date, new_time)`
+  - `__str__()` for detailed output
+
+### AppointmentScheduler
+- **Purpose:**  
+  Manages overall scheduling.
+- **Key Attributes:**  
+  - Lists of `appointments`, `doctors`, and `patients`
+- **Key Methods:**  
+  - `add_doctor()`, `add_patient()`
+  - `schedule_appointment(patient, date, time)`
+  - `cancel_appointment(appointment_id)`
+  - `view_appointments()`
+  - `reschedule_appointment(appointment_id, new_date, new_time)`
+
+### DataManager
+- **Purpose:**  
+  Handles loading and saving of data to JSON files.
+- **Key Methods:**  
+  - `load_patients_from_json()`, `save_patients_to_json()`
+  - `load_doctors_from_json()`, `save_doctors_to_json()`
+  - `load_appointments_from_json()`, `save_appointments_to_json()`
+
+### HospitalCLI
+- **Purpose:**  
+  Provides the command-line interface.
+- **Admin Area:**  
+  - Add Patient, Add Doctor, View All Appointments, Add Doctor Availability Slot, List Patients, List D
+- **User Area:**  
+  - View My Appointments, Book Appointment, Cancel Appointment, Reschedule Appointment
+- **Data Handling:**  
+  - Loads data on startup and saves on exit
+
+---
+
+## 5. Data Persistence with JSON
+
+- **Implementation:**  
+  The `DataManager` class reads from and writes to JSON files (e.g., `patients.json`, `doctors.json`, `appointments.json`).
+- **Benefits:**  
+  - Data is human-readable and easily modifiable.
+  - Ensures persistence of records between program executions.
+
+---
+
+## 6. How to Run the Program
+
+1. **Prerequisites:**  
+   - Python 3.x installed.
+2. **Files in the Project:**  
+   - `main.py`: Contains core classes and logic.
+   - `HospitalCLI.py`: Contains the CLI implementation.
+   - JSON files (`patients.json`, `doctors.json`, `appointments.json`) are created/updated automatically.
+3. **Execution:**  
+   - Open a terminal in the project directory.
+   - Run the command:  
+     ```
+     python HospitalCLI.py
+     ```
+4. **Usage:**  
+   - Follow the on-screen menus to navigate between Admin and User areas.
+
+---
+
+## 7. User & Admin Areas
+
+- **Admin Area:**  
+  - **Functions:**  
+    - Add Patient, Add Doctor, View All Appointments, Add Doctor Availability Slot, List Patients.
+  - **Access:**  
+    - Select the Admin area from the main menu.
+  
+- **User Area:**  
+  - **Functions:**  
+    - View My Appointments, Book Appointment, Cancel Appointment, Reschedule Appointment.
+  - **Access:**  
+    - Enter your Patient ID to access your personal appointment management.
+
+---
+
+## 8. Future Enhancements
+
+- **Graphical User Interface (GUI):**  
+  Implement a GUI using frameworks like Tkinter or a web-based interface.
+- **Database Integration:**  
+  Replace JSON file storage with a relational database (e.g., SQLite, PostgreSQL).
+- **Additional Features:**  
+  - Email/SMS notifications
+  - Advanced reporting and analytics
+
+---
+
+## 9. Conclusion
+
+The Hospital Appointment System demonstrates a practical application of OOP principles in Python to solve real-world scheduling challenges. With clear separation of concerns, role-based access, and data persistence via JSON, the system is both scalable and maintainable. Future improvements can further enhance user experience and performance.
+
+---

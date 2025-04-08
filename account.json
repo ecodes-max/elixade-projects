@@ -1,0 +1,50 @@
+[
+    {
+        "name": "tolu",
+        "contact_info": 8067600639,
+        "age": 34,
+        "gender": "M",
+        "card_no": 244,
+        "date_of_birth": "2005-08-09",
+        "required_specialization": "Dentist"
+    },
+    {
+        "name": "victot",
+        "contact_info": 80808898,
+        "age": 67,
+        "gender": "F",
+        "card_no": 687,
+        "date_of_birth": "2006-04-23",
+        "required_specialization": "Eye Doctor"
+    },
+    {
+        "name": "toul",
+        "contact_info": "9349396349",
+        "age": 34,
+        "gender": "M",
+        "card_no": 354,
+        "date_of_birth": "2006-08-09",
+        "required_specialization": "Dentist",
+        "patient_Id": "7c9a2258-c8d5-4e54-afb5-c925751cd2be"
+    },
+    {
+        "name": "toto",
+        "contact_info": "396i39648",
+        "age": 56,
+        "gender": "M",
+        "card_no": 5757,
+        "date_of_birth": "2006-05-08",
+        "required_specialization": "Dentist",
+        "patient_Id": "a9bb0d82-82f3-4390-97dc-f10bb15b5500"
+    },
+    {
+        "name": "tyu",
+        "contact_info": "6677888",
+        "age": 44,
+        "gender": "M",
+        "card_no": 456,
+        "date_of_birth": "2005-08-09",
+        "required_specialization": "Dentist",
+        "patient_Id": "16b64b5a-8ab7-4f55-8631-abc96353c2da"
+    }
+]
